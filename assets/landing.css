@@ -1,3 +1,11 @@
-p{
-	color:tomato;
+:root{
+	--base-size: 12px;
+	--gutter: calc(3*var(--base-size));
+
+	--primary-color: black;
+	--background-color: rgb(247, 237, 208);
+	--accent-color: tomato;
+
 }
+
+
