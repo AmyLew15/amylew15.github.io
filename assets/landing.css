@@ -5,7 +5,17 @@
 	--primary-color: black;
 	--background-color: rgb(247, 237, 208);
 	--accent-color: tomato;
-
+	--fun-color: gold;
 }
 
+header{
+	background-color: var(--fun-color);
+}
 
+.gutters{
+	padding-inline: var(--gutter)
+}
+
+p{
+	color: var(--accent-color)
+}
