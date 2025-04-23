@@ -18,37 +18,65 @@
 	--gutter: var(--size-1);
 
 	/* Colors */
-	--primary-color: black;
-	--background-color: rgb(247, 237, 208);
-	--accent-color: rgb(2, 47, 14);
-	--fun-color: rgb(156, 236, 51);
+	--white: #FEFEFE;
+	--black: #161E1A;
+	--brand-green:#1F9D56;
+	--electric-green: #A8F100;
 }
 
-header{
-	background-color: var(--fun-color);
-	padding-block: calc(5* var(--base-size));
+*, *::before, *::after {
+	box-sizing: border-box;
 }
 
-.gutters{
-	padding-inline: var(--gutter);
+html{
+	scroll-behavior: smooth;
 }
 
-section{
-	color: var(--accent-color);
-	padding-block: calc(2* var(--base-size));
-	block-size: 65vh;
-	padding-block: 20px;
+body{
+	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overscroll-behavior: none;
 }
 
-footer{
-	background-color: var(--fun-color);
-	padding-top: var(--base-size);
-	padding-bottom: calc(5* var(--base-size));
+nav{
+	font-family: var(--font-1);
+	font-size: var(--size-1);
+	font-weight: 600;
+	color: var(--black);
+	text-align: center;
 }
 
-@media (min-width: 600px) {
-	:root{
-		--base-size: 20px;
-		--gutter: calc(3*var(--base-size));
-	}
+h1{
+	font-family: var(--font-2);
+	font-size: var(--size-1);
+	font-weight: 400;
+	color: var(--black);
+	text-align: center;
+}
+
+em{
+	font-family: var(--font-2);
+	font-size: var(--size-1);
+	font-weight: 700;
+	color: var(--black);
+}
+
+h2{
+	font-family: var(--font-1);
+	font-size: var(--size-5);
+	font-weight: 700;
+	color: var(--brand-green);
+}
+
+#footer{
+	font-family: var(--font-2);
+	font-size: calc(.8*var(--size-1));
+	font-weight: 400;
+	color: var(--black);
+	text-align: center;
+	padding: var(--size-1);
+	margin-top: auto;
+	overflow: hidden;
 }
