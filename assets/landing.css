@@ -1,7 +1,23 @@
 :root{
-	--base-size: 16px;
-	--gutter: var(--base-size);
+	/* Fonts */
+	--font-1: "bricolage-grotesque", sans-serif;
+	--font-2: "poppins", sans-serif;
 
+	/* Font size */
+		--size-1: 16px;
+		--size-2: 20px;
+		--size-3: 24px;
+		--size-4: 32px;
+		--size-5: 48px;
+		--size-6: 64px;
+		--size-7: 80px;
+		--size-8: 96px;
+		--size-9: 112px;
+		--size-10: 144px;
+
+	--gutter: var(--size-1);
+
+	/* Colors */
 	--primary-color: black;
 	--background-color: rgb(247, 237, 208);
 	--accent-color: rgb(2, 47, 14);
