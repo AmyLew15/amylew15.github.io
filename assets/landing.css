@@ -46,6 +46,50 @@ nav{
 	font-weight: 600;
 	color: var(--black);
 	text-align: center;
+	padding-top: var(--size-4);
+	padding-left: var(--size-2);
+	padding-right: var(--size-2);
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+nav :hover{
+	text-decoration: underline;
+}
+
+.site-title img {
+	height: 20px;
+	width: auto;
+	display: block;
+}
+
+#menu-toggle{
+	display: none;
+}
+
+#menu-toggle:checked ~ .nav-links {
+	display: flex;
+}
+
+.menu-icon{
+	font-size: var(--size-4);
+	display: block;
+	cursor: pointer;
+}
+
+.nav-links{
+	padding: var(--size-1);
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: none;
+}
+
+.nav-links li{
+	padding: var(--size-1);
 }
 
 h1{
@@ -53,7 +97,8 @@ h1{
 	font-size: var(--size-1);
 	font-weight: 400;
 	color: var(--black);
-	text-align: center;
+	text-align: left;
+	padding: var(--size-2);
 }
 
 em{
