@@ -59,10 +59,14 @@ nav :hover{
 	text-decoration: underline;
 }
 
-.site-title img {
+#logo-mobile{
 	height: 20px;
 	width: auto;
 	display: block;
+}
+
+#logo{
+	display: none;
 }
 
 #menu-toggle{
@@ -108,6 +112,16 @@ em{
 	color: var(--black);
 }
 
+main ul{
+	padding: var(--size-2);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: var(--size-2);
+	position: relative;
+}
+
 h2{
 	font-family: var(--font-1);
 	font-size: var(--size-5);
@@ -124,4 +138,33 @@ h2{
 	padding: var(--size-1);
 	margin-top: auto;
 	overflow: hidden;
+}
+
+@media (min-width: 768px) {
+	#logo-mobile{
+		display: none;
+	}
+
+	#logo{
+	  display: block;
+	  height: 40px;
+	  width: auto;
+	}
+
+	.menu-icon{
+		display: none;
+	}
+
+	#menu-toggle{
+		display: none;
+	}
+
+	.nav-links{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 1.2rem;
+		position: static;
+		width: auto;
+	}
 }
