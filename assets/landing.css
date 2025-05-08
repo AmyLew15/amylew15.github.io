@@ -66,20 +66,26 @@ body{
 	display: none;
 }
 
-#menu-toggle{
-	display: none;
-}
-
-#menu-toggle:checked .nav-links {
+.menu {
+	position: relative;
+	z-index: 200;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.menu-icon{
-	font-size: var(--size-4);
+.menu-icon {
+	font-size: var(--size-5);
 	color: var(--black);
-	display: block;
 	cursor: pointer;
 	z-index: 20;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#menu-toggle:checked + .menu-icon{
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
 }
 
 .nav-links{
@@ -89,7 +95,7 @@ body{
 	color: var(--brand-green);
 	background-color: var(--white);
 	padding: var(--size-1);
-	display: none;
+	display: flex;
 	flex-direction: column;
 	position: absolute;
 	justify-content: center;
@@ -100,29 +106,37 @@ body{
 	height: 100vh;
 	gap: 10px;
 	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.site-nav:has(#menu-toggle:checked) .nav-links {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
 }
 
 .nav-links :hover{
 	text-decoration: underline;
 }
 
-#menu-toggle:checked~.menu-icon {
-	display: none;
-}
-
-#menu-toggle:checked~.nav-links{
-	display: flex;
+.close-icon{
+	font-size: var(--size-4);
+	color: var(--brand-green);
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 #menu-toggle:checked~.close-icon {
-	display: block;
+	opacity:1;
+	visibility: visible;
+	pointer-events: auto;
 }
-
-.close-icon{
-	color: var(--brand-green);
-	display: none;
-}
-
 
 h1{
 	font-family: var(--font-2);
