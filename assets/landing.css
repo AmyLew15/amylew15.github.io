@@ -235,21 +235,18 @@ main ul{
 }
 
 @media (min-width: 768px) {
+
 	#logo-mobile{
 		display: none;
 	}
 
-	#logo{
-	  display: block;
-	  height: 40px;
-	  width: auto;
+	#logo-desktop{
+		display: block;
+		height: 40px;
+		width: auto;
 	}
 
-	.menu-icon{
-		display: none;
-	}
-
-	#menu-toggle{
+	.menu-icon, #menu-toggle, .close-icon{
 		display: none;
 	}
 
@@ -260,6 +257,58 @@ main ul{
 		gap: 1.2rem;
 		position: static;
 		width: auto;
+		height: auto;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.nav-links a {
+		font-size: var(--size-2);
+		font-weight: 600;
+		color: var(--black);
+		text-decoration: none;
+	}
+	
+	.nav-links a:hover {
+		color: var(--brand-green);
+		text-decoration: underline;
+	}
+
+	#welcome {
+		padding: var(--size-1);
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h1, em {
+		font-size: var(--size-3);
+		line-height: 1.5;
+		text-align: left;
+	}
+
+	.project {
+		width: 100vw;
+		padding: var(--size-4) var(--size-2);
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+	}
+
+	.project details {
+		max-width: 700px;
+		width: 100%;
+	}
+
+	.project h2 {
+		font-size: var(--size-6);
+	}
+	
+	.project p,
+	.project h3,
+	.project em a {
+		font-size: var(--size-3);
+		letter-spacing: 1.2;
 	}
 
 	.project h2 :hover{
