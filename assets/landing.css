@@ -213,7 +213,7 @@ main ul{
 	font-size: var(--size-2);
 	padding: var(--size-1);
 	display: block;
-	text-decoration: none;
+	text-decoration: underline;
 	letter-spacing: 1.2;
 }
 
@@ -260,5 +260,13 @@ main ul{
 		gap: 1.2rem;
 		position: static;
 		width: auto;
+	}
+
+	.project h2 :hover{
+		color: var(--white);
+	}
+
+	.project em a :hover{
+		color: var(--electric-green);
 	}
 }
