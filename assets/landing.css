@@ -236,11 +236,11 @@ main ul{
 
 @media (min-width: 768px) {
 
-	#logo-mobile{
+	.logo-mobile{
 		display: none;
 	}
 
-	#logo-desktop{
+	.logo-desktop{
 		display: block;
 		height: 40px;
 		width: auto;
