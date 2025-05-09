@@ -24,11 +24,8 @@
 	--electric-green: #A8F100;
 }
 
-*, *::before, *::after {
-	box-sizing: border-box;
-}
-
-html{
+	/* Start Mobile Styles */
+*{
 	scroll-behavior: smooth;
 }
 
@@ -40,6 +37,7 @@ body{
 	overscroll-behavior: none;
 }
 
+	/* Navigation */
 .site-nav{
 	padding: var(--size-2);
 	display: flex;
@@ -57,9 +55,9 @@ body{
 }
 
 .logo-mobile{
+	display: block;
 	height: 30px;
 	width: auto;
-	display: block;
 }
 
 .logo-desktop{
@@ -67,11 +65,11 @@ body{
 }
 
 .menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	position: relative;
 	z-index: 200;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .menu-icon {
@@ -118,10 +116,6 @@ body{
 	pointer-events: auto;
 }
 
-.nav-links :hover{
-	text-decoration: underline;
-}
-
 .close-icon{
 	font-size: var(--size-4);
 	color: var(--brand-green);
@@ -138,6 +132,7 @@ body{
 	pointer-events: auto;
 }
 
+	/* Start of Copy */
 h1{
 	font-family: var(--font-2);
 	font-size: var(--size-1);
@@ -158,9 +153,11 @@ h2{
 h3{
 	font-family: var(--font-2);
 	font-size: var(--size-2);
-	font-weight: 700;
+	font-weight: 900;
 	color: var(--white);
 	letter-spacing: 1.1;
+	padding-top: var(--size-1);
+	text-wrap: pretty;
 	margin: 0;
 }
 
@@ -168,12 +165,15 @@ p{
 	font-family: var(--font-2);
 	font-size: var(--size-1);
 	font-weight: 400;
-	color: var(--black);
+	color: var(--white);
 	text-wrap: pretty;
+	padding-top: var(--size-1);
+	display: block;
+	text-decoration: none;
 }
 
 em{
-	font-family: var(--font-1);
+	font-family: var(--font-2);
 	font-size: var(--size-1);
 	font-weight: 900;
 	color: var(--black);
@@ -192,25 +192,10 @@ main ul{
 	padding: var(--size-2);
 }
 
-.project h3{
-	font-size: var(--size-2);
-	padding-top: var(--size-1);
-	text-wrap: pretty;
-}
-
-.project p{
-	color: var(--white);
-	font-family: var(--font-2);
-	font-size: var(--size-1);
-	padding-top: var(--size-1);
-	display: block;
-	text-decoration: none;
-}
-
 .project em a {
-	color: var(--white);
 	font-family: var(--font-2);
 	font-size: var(--size-2);
+	color: var(--white);
 	padding: var(--size-1);
 	display: block;
 	text-decoration: underline;
@@ -223,7 +208,7 @@ main ul{
 .project:nth-of-type(4) { background-color: #022a13; }
 .project:nth-of-type(5) { background-color: var(--black); }
 
-#footer{
+#footer p{
 	font-family: var(--font-2);
 	font-size: calc(.8*var(--size-1));
 	font-weight: 400;
@@ -236,6 +221,7 @@ main ul{
 
 @media (min-width: 768px) {
 
+	/* Navigation */
 	.logo-mobile{
 		display: none;
 	}
@@ -250,39 +236,52 @@ main ul{
 		display: none;
 	}
 
+	.site-nav{
+		padding: var(--size-3) var(--size-7);
+	}
+
 	.nav-links{
+		font-size: var(--size-2);
+		font-weight: 500;
+		color: var(--black);
+		text-decoration: none;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
-		gap: 1.2rem;
+		gap: var(--size-3);
 		position: static;
 		width: auto;
 		height: auto;
+		background: none;
+		visibility: visible;
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	.site-nav .nav-links {
+		pointer-events: auto;
 		visibility: visible;
 		opacity: 1;
 	}
 
-	.nav-links a {
-		font-size: var(--size-2);
-		font-weight: 600;
-		color: var(--black);
-		text-decoration: none;
-	}
-	
-	.nav-links a:hover {
-		color: var(--brand-green);
+	.nav-links a:hover,
+	.nav-links a.active {
 		text-decoration: underline;
+	}
+
+	.nav-links a.active {
+		color: var(--brand-green);
 	}
 
 	#welcome {
 		padding: var(--size-1);
-		max-width: 800px;
+		max-width: 1100px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	h1, em {
-		font-size: var(--size-3);
+		font-size: calc(1.1*var(--size-1));
 		line-height: 1.5;
 		text-align: left;
 	}
@@ -303,13 +302,6 @@ main ul{
 	.project h2 {
 		font-size: var(--size-6);
 	}
-	
-	.project p,
-	.project h3,
-	.project em a {
-		font-size: var(--size-3);
-		letter-spacing: 1.2;
-	}
 
 	.project h2 :hover{
 		color: var(--white);
@@ -317,5 +309,9 @@ main ul{
 
 	.project em a :hover{
 		color: var(--electric-green);
+	}
+
+	#footer p{
+		font-size: var(--size-1);
 	}
 }
